@@ -1,0 +1,13 @@
+.weather-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    button {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}

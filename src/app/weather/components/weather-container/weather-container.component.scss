@@ -1,0 +1,11 @@
+.weather-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .top-container{
+        flex: 3;
+    }
+    .bottom-container {
+        flex: 1;
+    }
+}

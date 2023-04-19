@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WeatherPageComponent } from './weather-page/weather-page.component';
+import { WeatherPageComponent } from './components/weather-page/weather-page.component';
+import { WeatherContainerComponent } from './components/weather-container/weather-container.component';
 
 
 
 @NgModule({
   declarations: [
-    WeatherPageComponent
+    WeatherPageComponent,
+    WeatherContainerComponent
   ],
   imports: [
     CommonModule
