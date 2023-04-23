@@ -1,0 +1,10 @@
+:host {
+    display: block;
+    height: 100%;
+    .weather-box {
+        background: linear-gradient(13.87deg, #126cf4 4.96%, #82daf4 97.35%);
+        height: 100%;
+        border-radius: 65px;
+        display: block;
+    }
+}
