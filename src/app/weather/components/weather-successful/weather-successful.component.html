@@ -1,0 +1,11 @@
+<weather-container>
+    <div class="top">
+        <weather-box>
+            <current-weather [currentWeather]="weather?.currentWeather" [settlement]="weather?.location?.settlement">
+            </current-weather>
+        </weather-box>
+    </div>
+    <div class="bottom">
+        <forecast [forecast]="weather?.forecast"></forecast>
+    </div>
+</weather-container>

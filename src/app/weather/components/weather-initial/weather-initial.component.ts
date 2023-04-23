@@ -15,6 +15,8 @@ export class WeatherInitialComponent {
   }
 
   locate(): void {
+    console.log('pos');
+
     this.store.dispatch(getPosition());
   }
 

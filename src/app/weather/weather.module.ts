@@ -8,10 +8,15 @@ import { WeatherContainerComponent } from './components/weather-container/weathe
 import { WeatherInitialComponent } from './components/weather-initial/weather-initial.component';
 import { WeatherLocationSuccessfulComponent } from './components/weather-location-successful/weather-location-successful.component';
 import { WeatherPageComponent } from './components/weather-page/weather-page.component';
-import { WeatherPositionErrorComponent } from './components/weather-position-error/weather-position-error.component';
+import { WeatherPositionFailedComponent } from './components/weather-position-failed/weather-position-failed.component';
 import { WeatherPositionLoadingComponent } from './components/weather-position-loading/weather-position-loading.component';
+import { WeatherSuccessfulComponent } from './components/weather-successful/weather-successful.component';
 import { PositionEffects } from './store/effects/position.effects';
+import { WeatherEffects } from './store/effects/weather.effects';
 import { weatherReducer } from './store/reducers/weather.reducer';
+import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
+import { ForecastComponent } from './components/forecast/forecast.component';
+import { ForecastItemComponent } from './components/forecast-item/forecast-item.component';
 
 
 
@@ -23,13 +28,18 @@ import { weatherReducer } from './store/reducers/weather.reducer';
     WeatherLocationSuccessfulComponent,
     WeatherInitialComponent,
     WeatherPositionLoadingComponent,
-    WeatherPositionErrorComponent,
+    WeatherPositionFailedComponent,
+    WeatherSuccessfulComponent,
+    CurrentWeatherComponent,
+    ForecastComponent,
+    ForecastItemComponent,
 
   ],
   imports: [
     CommonModule,
     StoreModule.forRoot({ weather: weatherReducer }),
     EffectsModule.forRoot(PositionEffects),
+    EffectsModule.forFeature(WeatherEffects),
     HttpClientModule,
   ],
   exports: [

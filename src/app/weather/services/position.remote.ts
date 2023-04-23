@@ -14,7 +14,7 @@ export class PositionRemote {
     private static readonly baseUrl:string = 'https://api.openweathermap.org/geo/1.0'
 
     getSettlementByPosition(position: Position) {
-        return this.httpClient.get(`${PositionRemote.baseUrl}//reverse?lat=${position.latitude}&lon=${position.longitude}&limit=1&appid=${openWeatherMapKey}`).pipe(map((result:any) => <string>result[0].local_names.en));
+        return this.httpClient.get(`${PositionRemote.baseUrl}/reverse?lat=${position.latitude}&lon=${position.longitude}&limit=1&appid=${openWeatherMapKey}`).pipe(map((result:any) => <string>result[0].local_names.en));
     }
 
 

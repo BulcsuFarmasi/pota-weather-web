@@ -7,11 +7,15 @@
         <weather-position-loading [position]="(weatherState$ | async)?.weather?.location?.position">
         </weather-position-loading>
     </div>
-    <div class="position-error" *ngSwitchCase="weatherStateType.positionError">
-        <weather-position-error></weather-position-error>
+    <div class="position-failed" *ngSwitchCase="weatherStateType.positionFailed">
+        <weather-position-failed></weather-position-failed>
     </div>
     <div class="location-successful" *ngSwitchCase="weatherStateType.locationSuccessful">
         <weather-location-successful [location]="(weatherState$ | async)?.weather?.location">
         </weather-location-successful>
+    </div>
+    <div class="weather-successful" *ngSwitchCase="weatherStateType.weatherSuccessful">
+        <weather-successful [weather]="(weatherState$ | async)?.weather">
+        </weather-successful>
     </div>
 </div>

@@ -5,4 +5,4 @@ export interface WeatherState {
     weather?: Weather;    
 }
 
-export enum WeatherStateType { initial, positionLoading, positionSuccessful, positionError, locationSuccessful, weatherSuccessful, weatherError }
+export enum WeatherStateType { initial, positionLoading, positionSuccessful, positionFailed, locationSuccessful, weatherSuccessful, weatherFailed }

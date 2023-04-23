@@ -2,8 +2,8 @@ export class WeatherCondition {
     description: string;
     icon: string;
 
-    constructor(decription: string, icon: string) {
-        this.description = decription;
+    constructor(description: string, icon: string) {
+        this.description = description;
         this.icon = icon;
     }
 
