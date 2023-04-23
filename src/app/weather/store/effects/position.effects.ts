@@ -25,7 +25,7 @@ export class PositionEffects {
             )
         ))));
 
-    getSettlementByPosition = createEffect(() => this.actions$.pipe(
+    getSettlementByPosition$ = createEffect(() => this.actions$.pipe(
         ofType(getLocationByPosition),
         exhaustMap((action) => this.positionService.getLocationByPosition(action.position).pipe(
             map((location: Location) => locationSuccessful({ location }),
