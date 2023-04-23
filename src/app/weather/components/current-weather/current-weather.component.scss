@@ -1,0 +1,15 @@
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .condition {
+        font-size: 30px;
+        color: #fff;
+    }
+    .temperature {
+        font-size: 56px;
+        color: #fff;
+    }
+}

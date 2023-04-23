@@ -1,0 +1,5 @@
+<div class="forecast-item">
+    <p class="temperature">{{ dailyWeather?.temperature }} °C</p>
+    <img [src]="dailyWeather?.condition?.iconUrl" class="icon">
+    <p class="day">{{ dailyWeather?.date | date : 'EEE' }}</p>
+</div>

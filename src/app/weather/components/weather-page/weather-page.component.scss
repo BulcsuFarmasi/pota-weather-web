@@ -6,8 +6,9 @@
         height: 100%;
         .initial,
         .position-loading,
-        .position-error,
-        .location-successful {
+        .position-failed,
+        .location-successful,
+        .weather-successful {
             height: 100%;
         }
     }

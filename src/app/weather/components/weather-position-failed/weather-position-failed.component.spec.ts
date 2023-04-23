@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WeatherPositionErrorComponent } from './weather-position-error.component';
+import { WeatherPositionErrorComponent } from './weather-position-failed.component';
 
 describe('WeatherPositionErrorComponent', () => {
   let component: WeatherPositionErrorComponent;

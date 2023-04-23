@@ -1,0 +1,6 @@
+<div class="current-weather">
+    <h1 class="settlement">{{ settlement }}</h1>
+    <img [src]="currentWeather?.condition?.iconUrl" class="icon">
+    <p class="temperature">{{ currentWeather?.temperature }} °C</p>
+    <p class="condition">{{ currentWeather?.condition?.description }}</p>
+</div>
