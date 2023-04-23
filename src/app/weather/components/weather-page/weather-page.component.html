@@ -1,6 +1,17 @@
-<weather-container>
-    <weather-box class="top">
-        <weather-location></weather-location>
-    </weather-box>
-    <p class="bottom">Bottom</p>
-</weather-container>
+{{ (weatherState$ | async)?.type }}
+<div class="weather-page" [ngSwitch]="(weatherState$ | async)?.type">
+    <div class="initial" *ngSwitchCase="weatherStateType.initial">
+        <weather-initial></weather-initial>
+    </div>
+    <div class="position-loading" *ngSwitchCase="weatherStateType.positionLoading">
+        <weather-position-loading [position]="(weatherState$ | async)?.weather?.location?.position">
+        </weather-position-loading>
+    </div>
+    <div class="position-error" *ngSwitchCase="weatherStateType.positionError">
+        <weather-position-error></weather-position-error>
+    </div>
+    <div class="location-successful" *ngSwitchCase="weatherStateType.locationSuccessful">
+        <weather-location-successful [location]="(weatherState$ | async)?.weather?.location">
+        </weather-location-successful>
+    </div>
+</div>

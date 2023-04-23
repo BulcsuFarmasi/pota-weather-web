@@ -1,11 +1,8 @@
-class WeatherState {
-    type: WeatherStateType;
-    weather: Weather | null;
+import { Weather } from './weather';
 
-    constructor(type: WeatherStateType, weather: Weather | null) {
-        this.type = type;
-        this.weather = weather;
-    }
+export interface WeatherState {
+    type: WeatherStateType;
+    weather?: Weather;    
 }
 
-enum WeatherStateType { initial, positionLoaded, positionError, weatherLoaded, weatherError }
+export enum WeatherStateType { initial, positionLoading, positionSuccessful, positionError, locationSuccessful, weatherSuccessful, weatherError }

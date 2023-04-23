@@ -1,0 +1,13 @@
+:host {
+    display: block;
+    height: 100%;
+    ::ng-deep {
+        button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+}

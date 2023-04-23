@@ -1,4 +1,14 @@
 :host {
+    display: block;
     height: 100%;
     padding: 20px;
+    .weather-page {
+        height: 100%;
+        .initial,
+        .position-loading,
+        .position-error,
+        .location-successful {
+            height: 100%;
+        }
+    }
 }

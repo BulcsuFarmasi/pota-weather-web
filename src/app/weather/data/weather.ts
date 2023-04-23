@@ -1,11 +1,9 @@
-class Weather {
-    settlement:string;
-    currentWeather: DailyWeather | null;
-    forecast: DailyWeather[] | null;
+import { DailyWeather } from './daily-weather';
+import { Location } from './location';
 
-    constructor(settlement: string, currentWeather: DailyWeather | null, forecast: DailyWeather[] | null) {
-        this.settlement = settlement;
-        this.currentWeather = currentWeather;
-        this.forecast = forecast;
-    }
+export interface Weather {
+    location?: Location;
+    currentWeather?: DailyWeather;
+    forecast?: DailyWeather[];
+
 }

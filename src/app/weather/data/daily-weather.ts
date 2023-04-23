@@ -1,11 +1,7 @@
-class DailyWeather {
-    temperature: number;
-    condition:WeatherCondition;
-    date:Date;
+import { WeatherCondition } from './weather-condition';
 
-    constructor(temperature: number, condition:WeatherCondition, date:Date) {
-        this.temperature = temperature;
-        this.condition = condition;
-        this.date = date;
-    }
+export interface DailyWeather {
+    temperature: number;
+    condition: WeatherCondition;
+    date: Date;
 }
